@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url('images/bgs.jpg');
+            color: #000;
+        }
+
+        /* Header and Navigation Bar */
+        header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            background-color: #87ab69;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b6043;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #72bf6a; 
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-image: url('images/bannergallery.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Box Grid Layout */
+        .box-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .box {
+            border-radius: 10px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 10px rgba(100, 120, 80, 0.6); 
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Shake Animation */
+        .box:hover, .box:active {
+            animation: shake 0.3s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+
+       
+        .box1 { background-image: url('images/box1.jpg'); } 
+        .box2 { background-image: url('images/box2.jpg'); }
+        .box3 { background-image: url('images/box3.jpg'); }
+        .box4 { background-image: url('images/box4.jpg'); }
+        .box5 { background-image: url('images/box5.jpg'); }
+        .box6 { background-image: url('images/box6.jpg'); }
+        .box7 { background-image: url('images/box7.jpg'); }
+        .box8 { background-image: url('images/box8.jpg'); }
+
+        /* New Images for Duplicate Grid */
+        .box9 { background-image: url('images/box9.jpg'); }
+        .box10 { background-image: url('images/box10.jpg'); }
+        .box11 { background-image: url('images/box11.jpg'); }
+        .box12 { background-image: url('images/box12.jpg'); }
+        .box13 { background-image: url('images/box17.jpg'); grid-column: span 2; }
+        .box14 { background-image: url('images/box14.jpg'); }
+        .box15 { background-image: url('images/box15.jpg'); }
+        .box16 { background-image: url('images/box16.jpg'); }
+
+ /* Footer Section */
+        footer {
+            background-color: #4d9d4e;
+            color: #fff;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 14px;
+            width: 100%;
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .box-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="me.html">About Me</a></li>
+        <li><a href="family.html">My Family</a></li>
+        <li><a href="friends.html">My Friends</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="important.html">Important</a></li>
+        <li><a href="interest.html">Personal Interests</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+    </section>
+
+    <!-- Box Grid Section (Original) -->
+    <section class="box-grid">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5" style="grid-column: span 2;"></div>
+        <div class="box box6"></div>
+        <div class="box box7"></div>
+        <div class="box box8"></div>
+    </section>
+
+    <!-- Box Grid Section (Duplicate with New Images) -->
+    <section class="box-grid">
+        <div class="box box9"></div>
+        <div class="box box10"></div>
+        <div class="box box11"></div>
+        <div class="box box12"></div>
+        <div class="box box13"></div>
+        <div class="box box14"></div>
+        <div class="box box15"></div>
+        <div class="box box16"></div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 My Personal Website. All Rights Reserved.</p>
+        <p> Contact Me: +6013-3745183 </p>
+    </footer>
+
+
+</body>
+</html>
+

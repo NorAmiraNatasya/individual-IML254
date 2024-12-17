@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url('images/bgs.jpg'); 
+            color: #000;
+        }
+
+        /* Header and Navigation Bar */
+        header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            background-color: #87ab69;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b6043;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #72bf6a; 
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-image: url('images/bannerfam.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+
+        .services-section {
+            padding: 50px 20px;
+            background: background-image: url('images/bgs.jpg');
+            text-align: center;
+        }
+
+        .services-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #5e4b46;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .service-box {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .service-box h3 {
+            font-style: italic;
+            font-weight: 600;
+            color: #5e4b46;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .service-box span {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #5e4b46;
+        }
+
+
+.about-section {
+    padding: 50px 20px;
+    background-color: background-image: url('images/bgs.jpg'); 
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: #5e4b46;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-text hr {
+    border: none;
+    border-top: 1px solid #d0c3b8;
+    margin: 15px 0;
+}
+
+.about-text h3 {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #5e4b46;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query: Responsive About Us Section */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+ /* Footer Section */
+        footer {
+            background-color: #4d9d4e;
+            color: #fff;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 14px;
+            width: 100%;
+
+        /* Media Query: Mobile Responsive */
+        @media (max-width: 768px) {
+            .service-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-box {
+                max-width: 90%;
+            }
+
+
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="me.html">About Me</a></li>
+        <li><a href="family.html">My Family</a></li>
+        <li><a href="friends.html">My Friends</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="important.html">Important</a></li>
+        <li><a href="interest.html">Personal Interests</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+
+        <div class="service-container">
+            <!-- Package 1 -->
+            <div class="service-box">
+                <img src="images/fam1.jpg">
+                <p>This is my family on our first day of Hari Raya Aidilfitri 2024</p>                
+            </div>
+
+            <!-- Package 2 -->
+            <div class="service-box">
+                <img src="images/fam2.jpg">
+                <p>This is my family on our first day of Hari Raya Aidil Adha 2024</p>
+
+
+            </div>
+        </div>
+    </section>
+
+<!-- About Us Section -->
+<section class="about-section">
+    <div class="about-container">
+        <!-- Left Content -->
+        <div class="about-text">
+            <h1>My Big Family</h1>
+            <p> MY BIG FAMILY CONSIST OF 3 UNCLE, WHICH 2 OF THEM HAVE THEIR OWN FAMILY, 3 AUNTY WHICH ALL OF THEM HAVE THEIR OWN FAMILY, MY LATE GRANDFATHER SIBLINGS, AND MANY MORE. </p>
+            <p> We love going out together, spend time with each other whenever we have the times. Eventhough all of us were busy with works, study and other responsibility, it is important for us to hang out together to keep the bond forever. </p>
+        </div>
+        
+        <!-- Right Image -->
+        <div class="about-image">
+            <img src="images/bigfam.jpg">
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 My Personal Website. All Rights Reserved.</p>
+        <p> Contact Me: +6013-3745183 </p>
+    </footer>
+
+</body>
+</html>
+ 

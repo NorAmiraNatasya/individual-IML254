@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Day</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url('images/bgs.jpg');
+            color: #000;
+        }
+
+        /* Header and Navigation Bar */
+        header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            background-color: #87ab69;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b6043;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #72bf6a; 
+        }
+
+         /* Banner Section */
+        .banner {
+            width: 100%;
+            height: 200px; 
+            background-image: url('images/bannerimportant.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+/* Image and Caption Section */
+.image-caption-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.left-boxes {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-box {
+    height: 250px; 
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0; 
+}
+
+.image-box:not(:last-child) {
+    border-bottom: 2px solid #fff; 
+}
+
+.right-caption {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #4b6043; 
+    color: #fff;
+    text-align: left;
+}
+
+.right-caption h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.right-caption p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-caption-section {
+        flex-direction: column;
+    }
+
+    .left-boxes,
+    .right-caption {
+        width: 100%;
+    }
+
+    .image-box {
+        height: 200px; 
+    }
+}
+
+ /* Footer Section */
+        footer {
+            background-color: #4d9d4e;
+            color: #fff;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 14px;
+            width: 100%;
+
+        /* Media Query: Mobile Responsive */
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-section h1 {
+                font-size: 3.5rem;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+<header>
+    <nav>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="me.html">About Me</a></li>
+        <li><a href="family.html">My Family</a></li>
+        <li><a href="friends.html">My Friends</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="important.html">Important</a></li>
+        <li><a href="interest.html">Personal Interests</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Banner Section -->
+    <section class="banner">
+    </section>
+
+<!-- Image and Caption Section -->
+<section class="image-caption-section">
+    <!-- Left Side: Two Boxes -->
+    <div class="left-boxes">
+        <!-- First Box -->
+        <div class="image-box" style="background-image: url('images/pt3(1).jpg');"></div>
+        <!-- Second Box -->
+        <div class="image-box" style="background-image: url('images/pt3(2).jpg');"></div>
+    </div>
+    <!-- Right Side: Caption -->
+    <div class="right-caption">
+        <h2>PT3 RESULT DAY</h2>
+        <p>I got 5A's in PT3 with 'Anugerah Matapelajaran Terbaik Bahasa Inggeris'.</p>
+    </div>
+</section>
+
+<!-- Second Image and Caption Section -->
+<section class="image-caption-section">
+    <!-- Left Side: Caption -->
+    <div class="right-caption">
+        <h2>AFEEF BORN DAY</h2>
+        <p>Afeef who is my youngest brother was born on 23 March 2022 while i was taking SPM.</p>
+    </div>
+    <!-- Right Side: Two Boxes -->
+    <div class="left-boxes">
+        <!-- First Box -->
+        <div class="image-box" style="background-image: url('images/afeef1.jpg');"></div>
+        <!-- Second Box -->
+        <div class="image-box" style="background-image: url('images/afeef2.jpg');"></div>
+    </div>
+</section>
+
+<!-- Third Image and Caption Section -->
+<section class="image-caption-section">
+    <!-- Left Side: Two Boxes -->
+    <div class="left-boxes">
+        <!-- First Box -->
+        <div class="image-box" style="background-image: url('images/spm1.jpg');"></div>
+        <!-- Second Box -->
+        <div class="image-box" style="background-image: url('images/spm2.jpg');"></div>
+    </div>
+    <!-- Right Side: Caption -->
+    <div class="right-caption">
+        <h2>SPM RESULT DAY</h2>
+        <p>After all the hardwork, I got 7A's in SPM, celebrating this happy day together with family and friends.</p>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 My Personal Website. All Rights Reserved.</p>
+        <p> Contact Me: +6013-3745183 </p>
+    </footer>
+
+
+</body>
+</html>   
+

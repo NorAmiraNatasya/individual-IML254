@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url('images/bgs.jpg');
+            color: #000;
+        }
+
+        /* Header and Navigation Bar */
+        header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            background-color: #87ab69;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b6043;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #72bf6a;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-image: url('images/bannerme.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Project Portfolio Section */
+        .portfolio-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px auto;
+            max-width: 1000px;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .portfolio-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .portfolio-text h1 {
+            font-size: 3rem;
+            color: #6c5241;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-text h2 {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #8b6e5f;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-text h3 {
+            font-size: 1rem;
+            color: #38422B;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Color Palette */
+        .color-palette {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .color-palette .color-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        .color1 { background-color: #38422B; }
+        .color2 { background-color: #6E7753; }
+        .color3 { background-color: #9FB873; }
+        .color4 { background-color: #9AA581; }
+        .color5 { background-color: #CCD5CO; }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            flex: 1;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 5px;
+            height: auto;
+        }
+
+/* Shaking Image Box Section */
+.image-box-section h2 {
+    font-size: 2rem;
+    color: #4b6043;
+    margin-bottom: 20px;
+}
+
+.image-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.image-box:hover {
+    animation: shake 0.5s ease infinite;
+}
+
+/* Caption Styling */
+.caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+    text-align: center;
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+ /* Footer Section */
+        footer {
+            background-color: #4d9d4e;
+            color: #fff;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 14px;
+            width: 100%;
+
+        /* Media Query: Mobile Responsive */
+        @media (max-width: 768px) {
+            .portfolio-section {
+                flex-direction: column;
+            }
+
+            .portfolio-text {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="me.html">About Me</a></li>
+        <li><a href="family.html">My Family</a></li>
+        <li><a href="friends.html">My Friends</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="important.html">Important</a></li>
+        <li><a href="interest.html">Personal Interests</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+    </section>
+
+    <!-- Project Portfolio Section -->
+    <section class="portfolio-section">
+        <!-- Text Content -->
+        <div class="portfolio-text">
+            <h1>HI!</h1>
+            <h2>-My Introduction-</h2>
+            <h3>
+            <ul type="circle">
+            <li>Full Name : NOR AMIRA NATASYA BINTI ABDULLAH</li>
+            <li>Nickname : Miranats</li>
+            <li>Age : 2o years old</li>
+            <li>Birthday : 12 March 2004</li>
+            <li>Birthplace : Melaka, Malaysia</li>
+            <li>Course : Informatics Library, UiTM Kedah</li>
+            <li>Hobbies : Reading, cooking</li>
+            <li>Ambition : Lecturer</li>
+               
+                
+            </h3>
+            <!-- Color Palette -->
+            <div class="color-palette">
+                <div class="color-box color1"></div>
+                <div class="color-box color2"></div>
+                <div class="color-box color3"></div>
+                <div class="color-box color4"></div>
+                <div class="color-box color5"></div>
+            </div>
+        </div>
+
+        <!-- Image Grid -->
+        <div class="image-grid">
+            <img src="images/nats.jpg">
+            <img src="images/mira.jpg">
+            <img src="images/sya.jpg">
+            <img src="images/tasya.jpg">
+        </div>
+    </section>
+
+<section class="youtube-section" style="text-align: center; margin: 50px 0;">
+    <h2>My Introduction Video</h2>
+    <br>
+    <div class="youtube-video">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/azfAbxYjAK8" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    </br>
+</section>
+
+<!-- Shaking Image Boxes Section -->
+<section class="image-box-section" style="text-align: center; margin: 20px auto;">
+    <h2>BONUS : Me, as a little girl</h2>
+    <br>
+    <div class="image-box-container">
+        <!-- First Image Box -->
+        <div class="image-box">
+            <img src="images/babypic1.jpg" alt="Picture 1">
+            
+        </div>
+        <!-- Second Image Box -->
+        <div class="image-box">
+            <img src="images/babypic2.jpg" alt="Picture 2">
+            
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 My Personal Website. All Rights Reserved.</p>
+        <p> Contact Me: +6013-3745183 </p>
+    </footer>
+
+</body>
+</html>

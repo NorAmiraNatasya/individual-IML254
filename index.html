@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+ 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Garamond', sans-serif;
+        }
+
+        /* Body and Full Layout */
+        html, body {
+            height: 100%; 
+        }
+
+        body {
+            background-color: #87ab69;
+            color: #000;
+        }
+
+        /* Body Styling - Flexbox for sticky footer */
+        body {
+            background-color: #87ab69;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        /* Content Section */
+        .content {
+            flex: 1; 
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        /* Header and Navigation Bar */
+        header {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            background-color: #87ab69;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b6043;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #72bf6a; 
+        }
+
+         /* Banner Section */
+        .banner {
+            width: 100%;
+            height: 200px; 
+            background-image: url('images/banners.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+/* Portfolio Section Two-Column Layout */
+.portfolio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Flip Container */
+.image-flip {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; 
+}
+
+.image-front,
+.image-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    transition: transform 0.6s ease;
+}
+
+.image-front img,
+.image-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Front Image */
+.image-front {
+    transform: rotateY(0deg); 
+}
+
+/* Back Image */
+.image-back {
+    transform: rotateY(180deg); 
+}
+
+/* Flip on Hover */
+.image-flip:hover .image-front {
+    transform: rotateY(180deg);
+}
+
+.image-flip:hover .image-back {
+    transform: rotateY(0deg);
+}
+
+/* Right Side Text and Button */
+.portfolio-text {
+    text-align: left;
+    max-width: 500px;
+}
+
+.portfolio-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #215025;
+    margin-bottom: 10px;
+}
+
+.portfolio-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.portfolio-text button {
+    background-color: #215025;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.portfolio-text button:hover {
+    background-color: #72bf6a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-flip {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portfolio-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Social Media Section Styling */
+.social-media {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 20px 0;
+}
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; 
+    padding: 0;
+    margin: 0;
+}
+
+.social-media ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media ul li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover Effect */
+.social-media ul li a:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); 
+}
+
+
+
+ /* Footer Section */
+        footer {
+            background-color: #4d9d4e;
+            color: #fff;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        /* Media Query: Mobile Responsive */
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-section h1 {
+                font-size: 3.5rem;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation Bar -->
+<header>
+    <nav>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="me.html">About Me</a></li>
+        <li><a href="family.html">My Family</a></li>
+        <li><a href="friends.html">My Friends</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="important.html">Important</a></li>
+        <li><a href="interest.html">Personal Interests</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Banner Section -->
+    <section class="banner">
+
+    </section>
+
+<!-- Portfolio Section -->
+<section class="portfolio-section">
+    <div class="portfolio-container">
+        <!-- Left Side: Flipping Picture -->
+        <div class="portfolio-image">
+            <div class="image-flip">
+                <div class="image-front">
+                    <img src="images/myself.jpg" alt="Natasya Front Photo">
+                </div>
+                <div class="image-back">
+                    <img src="images/nats.jpg" alt="Natasya Back Photo">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Text and Button -->
+        <div class="portfolio-text">
+            <h2>My name is Natasya</h2>
+            <p><strong>This is my personal website that I created. Enjoy!</strong></p>
+            <button onclick="window.open('me.html', '_self')">Know more About Me</button>
+
+<!-- Social Media Links -->
+<div class="social-media">
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/miranats_/?hl=en" target="_blank">
+                <img src="images/insta.png" alt="Instagram">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.tiktok.com/@babymina20_?lang=en" target="_blank">
+                <img src="images/tiktok.png" alt="TikTok">
+            </a>
+        </li>
+        <li>
+            <a href="https://open.spotify.com/user/ptvdnfrsw8ufm080rpuv1v9jx?trackId=0nwTMzpatarzvLvtwwzdCt" target="_blank">
+                <img src="images/spotify.png" alt="Spotify">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.threads.net/@miranats_?xmt=AQGzlOXZnOqo4VNo_nr3ZZuvJPLJ7azoXSu6R1NneOvdjlM" target="_blank">
+                <img src="images/threads.png" alt="Threads">
+            </a>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 My Personal Website. All Rights Reserved.</p>
+        <p> Contact Me: +6013-3745183 </p>
+    </footer>
+
+</body>
+</html>          
